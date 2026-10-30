@@ -1,10 +1,11 @@
-import { Quaternion } from '@dcl/sdk/math'
+import { Quaternion, Vector3 } from '@dcl/sdk/math'
 import { AvatarShape, AvatarModifierArea, engine, Transform, TextShape, Entity, VideoPlayer, pointerEventsSystem, InputAction, Material} from '@dcl/sdk/ecs'
 import { openExternalUrl, triggerEmote } from '~system/RestrictedActions'
 import { getSpreadsheetData, jsonData } from './scheduler'
 import { syncEntity } from '@dcl/sdk/network'
 import { getTriggerEvents, getActionEvents } from '@dcl/asset-packs/dist/events'
 import { EntityNames } from '../assets/scene/entity-names'
+import { movePlayerTo } from '~system/RestrictedActions'
 
 export async function updateFromSpreadsheet(spreadsheetIndex: number = 0){
   const jsonData = await getSpreadsheetData()
@@ -127,3 +128,4 @@ function createWearable(wearableURN: string, wearableOffset: number, wearableSca
   syncEntity(wearable, [Transform.componentId, AvatarShape.componentId], 1)  
 
 }
+

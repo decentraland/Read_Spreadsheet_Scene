@@ -15,10 +15,10 @@
   "main": "bin/index.js",
   "tags": [],
   "scene": {
+    "base": "-133,-42",
     "parcels": [
-      "0,0"
-    ],
-    "base": "0,0"
+      "-133,-42"
+    ]
   },
   "spawnPoints": [
     {
@@ -51,14 +51,17 @@
   ],
   "featureToggles": {
     "voiceChat": "enabled",
-    "portableExperiences": "enabled"
+    "portableExperiences": "enabled",
+    "nearbyVoiceChat": "enabled"
   },
   "skyboxConfig": {
-    "fixedTime": 70260
+    "fixedTime": 76920
   },
   "source": {
     "origin": "creator-hub",
     "projectId": "86b3889e-7ad7-4730-97e0-0bf76c942af7"
   },
-  "rating": "T"
+  "rating": "T",
+  "creator": "",
+  "landscapeTerrain": true
 }
